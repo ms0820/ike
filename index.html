@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>IKEA</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/index.css">
+   <link rel="stylesheet" href="css/common.css">
+   <link rel="stylesheet" href="css/font.css">
+</head>
+<body> 
+
+   <!-- NOTICE -->
+   <section id="notice">
+      <div class="notice_wrapper">
+
+         <button class="btn_toggle  rotate-180 btn-style"  onclick="notice_toggle();">
+            <span class="btn_toggle_inner">
+               <span class="btn_toggle_inner_wrap">
+                  <svg class="btn_toggle_icon btn_fff svg_icon" 
+                  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        width="12px" height="12px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;"
+                        xml:space="preserve">
+                     <g>
+                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                           c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                           c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/> 
+                  </svg> 
+               </span>
+            </span>
+         </button>
+         
+         <div id="notice_center_content">
+            <div class="notice_center_content__item">
+               <a href="#">
+                  <svg class="notice_center_item_icon svg_icon" 
+                     width="12px" height="12px" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                     <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
+                     <circle cx="8" cy="4.5" r="1"/>
+                  </svg>
+                  <span class="notice_center_item_copy">
+                     코로나 19 대응 공지 및 비대면 서비스 안내
+                  </span>
+               </a>
+            </div>
+
+            <div class="notice_center__hidden">
+               <button id="notice_center_hidden__dismiss" class=" btn_fff">
+                  메시지 무시
+               </button>
+            </div> 
+         </div> <!--notice_whole_center_content-->
+
+      </div><!--notice_wrapper-->
+   </section>
+
+   <!-- HAMBURGER AND GRID -->
+   <div class="header-hamburger_grid header-hamburger">
+      <div class="header_hamburger__inner">   
+         <div class="header-hamburger__aside">
+            <button type="button" class="hamburger_btn btn-style" title="메뉴" aria-label="메뉴" onclick="side_menu_open();">
+            <span class="hamburger-btn_inner">
+               <span class="hamburger-btn__wrap"> 
+                  <svg class="svg-icon menu-icon"
+                     width="16px"
+                     height="16px"
+                     aria-hidden="true"
+                     focusable="false"
+                     data-prefix="fas"
+                     data-icon="bars" 
+                     role="img"
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 448 512">
+                     <path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                     </path>
+                  </svg> 
+               </span>
+            </span>
+            </button>
+         </div>
+      </div>
+   </div>
+   
+
+
+
+   <!-- HEADER -->
+   <header> 
+      <div class="header_container">
+         <div class="header_container__inner">
+            <div class="header_container__main">
+               <div class="header__logo">
+                  <a href="#">
+                     <img src="img/logo/ikea-logo.f88b07ceb5a8c356b7a0fdcc9a563d63.svg" alt="IKEA LOGO" title="IKEA">
+                  </a>
+               </div>
+               <nav class="header__nav">
+                  <ul class="header_nav__ul">
+                     <li><a href="#">모든 제품</a></li>
+                     <li><a href="#">디지털 쇼룸</a></li>
+                  </ul>
+               </nav>
+               <div class="header__search">
+                  <div data-namespace="search-box">
+                     <div>
+                        <form role="search" action="#" class="search-box">
+                           <div class="search_wrap">
+                              <div class="search-field"> 
+                                 <input class="search-field__input" type="search" name="q" maxlength="150" spellcheck="false" aria-label="제품 및 아이디어, 신제품 검색" aria-placeholder="제품 및 아이디어, 신제품 검색" placeholder="검색어 입력" autocapitalize="off" autocomplete="off" autocorrect="off">
+                                 <span class="search_box__button-wrapper">
+                                    <button id="search-box__visualsearch " class="btn-style search-box__button single" aria-label="이미지로 검색" type="button">
+                                       <svg  class="btn_camera"
+                                             width="24px"
+                                             height="24px"
+                                             aria-hidden="true"
+                                             focusable="false" 
+                                             data-prefix="fas" 
+                                             data-icon="camera"role="img" 
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                             <path fill="currentColor" d="M512 144v288c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V144c0-26.5 21.5-48 48-48h88l12.3-32.9c7-18.7 24.9-31.1 44.9-31.1h125.5c20 0 37.9 12.4 44.9 31.1L376 96h88c26.5 0 48 21.5 48 48zM376 288c0-66.2-53.8-120-120-120s-120 53.8-120 120 53.8 120 120 120 120-53.8 120-120zm-32 0c0 48.5-39.5 88-88 88s-88-39.5-88-88 39.5-88 88-88 88 39.5 88 88z">
+                                       </path>
+                                       </svg>
+                                    </button>
+                                 </span>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               <ul class="header__icons"> 
+                  <!--<li class="header__search-btn"></li> 이거 정체가 뭘까,, -->
+                  <li class="header__order-tracking-link ">
+                     <a href="#">
+                        <span class="header-btn__inner">
+                           <span class="header-btn-inner__wrap ">
+                              <svg  class="header-svgicon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="truck" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M624 352h-16V243.9c0-12.7-5.1-24.9-14.1-33.9L494 110.1c-9-9-21.2-14.1-33.9-14.1H416V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h16c0 53 43 96 96 96s96-43 96-96h128c0 53 43 96 96 96s96-43 96-96h48c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM160 464c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm320 0c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-208H416V144h44.1l99.9 99.9V256z"></path>
+                              </svg>
+                           </span>
+                        </span>
+                     </a>
+                  </li>
+                  <li class="header__profile-link">
+                     <a href="#">
+                        <span class="header-btn__inner">
+                           <span class="header-btn-inner__wrap">
+                              <svg class="header-svgicon" aria-hidden="true" focusable="false" data-prefix="far" data-icon="user" class="svg-inline--fa fa-user fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"></path>
+                              </svg>
+                           </span>
+                        </span>
+                     </a>
+                  </li>
+                  <li class="header__shopping-list-link">
+                     <a href="#">
+                        <span class="header-btn__inner">
+                           <span class="header-btn-inner__wrap">
+                              <svg class="header-svgicon" aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path>
+                              </svg>
+                           </span>
+                        </span>
+                     </a>
+                  </li>
+                  <li class="header__shopping-cart-link">
+                     <a href="#">
+                        <span class="header-btn__inner">
+                           <span class="header-btn-inner__wrap">
+                              <svg class="header-svgicon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-basket" class="svg-inline--fa fa-shopping-basket fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M576 216v16c0 13.255-10.745 24-24 24h-8l-26.113 182.788C514.509 462.435 494.257 480 470.37 480H105.63c-23.887 0-44.139-17.565-47.518-41.212L32 256h-8c-13.255 0-24-10.745-24-24v-16c0-13.255 10.745-24 24-24h67.341l106.78-146.821c10.395-14.292 30.407-17.453 44.701-7.058 14.293 10.395 17.453 30.408 7.058 44.701L170.477 192h235.046L326.12 82.821c-10.395-14.292-7.234-34.306 7.059-44.701 14.291-10.395 34.306-7.235 44.701 7.058L484.659 192H552c13.255 0 24 10.745 24 24zM312 392V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm112 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm-224 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24z"></path>
+                              </svg>
+                           </span>
+                        </span>
+                     </a>
+                  </li> 
+                  <!-- <li class="header__hamburger"></li> 아니 이게 왜 여기에.. -->
+               </ul>
+            </div>
+         </div>
+      </div> 
+   </header>
+
+   <div id="dimmed" onclick="side_menu_close();" ></div>
+   <!-- Slide menu -->
+   <aside id="side_slide_menu">
+      <div class="slide-menu__top"> 
+         <div class="slide-menu__close" onclick="side_menu_close();">
+            <button class="slide-btn" type="button" aria-label="메뉴 닫기" title="메뉴 닫기">
+               <span class="slide-btn__inner">
+                  <span class="slide-btn-inner__wrap">
+                     <svg class="close-svg"
+                        width="24px"
+                        height="24px"
+                        aria-hidden="true" 
+                        focusable="false" 
+                        data-prefix="fas" 
+                        data-icon="times"  
+                        role="img" xmlns="http://www.w3.org/2000/svg" 
+                        viewBox="0 0 352 512"><path fill="currentColor" 
+                        d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+                     </svg>
+                  </span>
+               </span>
+            </button>
+         </div>
+
+         <div class="slide-menu__logo">
+            <a href="#">
+               <img src="img/logo/ikea-logo.f88b07ceb5a8c356b7a0fdcc9a563d63.svg" alt="IKEA" title="IKEA">
+            </a>
+         </div> 
+      </div><!--/slide-menu__top-->
+      <div class="side-slide-menu__container">
+         <nav class="slide-menu-nav">
+            <ul class="slide-menu-nav__ul">
+               <li><a href="#">모든 제품</a></li>
+               <li><a href="#">디지털 쇼룸</a></li>
+               <li><a href="#" class="slide-menu-nav__li-small">이달의 혜택</a></li>
+               <li><a href="#" class="slide-menu-nav__li-small">신제품</a></li>
+               <li><a href="#" class="slide-menu-nav__li-small">아이디어</a></li>
+               <li><a href="#" class="slide-menu-nav__li-small">더 낮은 새로운 가격</a></li>
+               <li><a href="#" class="slide-menu-nav__li-small">유용한 정보</a></li>
+            </ul>
+            <ul class="slide-menu-aux">
+               <li><a href="#">매장안내</a></li>
+               <li><a href="#">IKEA Family</a></li>
+               <li><a href="#">고객지원</a></li>
+               <li><a href="#">배송조회</a></li>
+               <li><a href="#">내 프로필</a></li>
+            </ul>
+         </nav>
+      </div>
+      <div class="slide-menu__alternate">
+         <div class="switch-lang select-dropdown">
+            <select aria-label="원하시는 언어를 선택하세요.">
+               <option value="https://www.ikea.com/kr/ko/">한국어</option>
+               <option value="https://www.ikea.com/kr/en/">English</option>
+            </select>
+            <svg class="select-svg" 
+            version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="12px" height="12px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;"
+   xml:space="preserve">
+<g>
+   <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+      c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+      c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
+ 
+            </svg> 
+         </div>
+         <a href="#" class="slide-btn-change-country">
+            <svg class="change-country-btn-svg"
+                  width="24px" height="24px"
+                  aria-hidden="true" focusable="false" data-prefix="fas" data-icon="globe"  role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"></path>
+            </svg>
+            국가 변경
+         </a>
+      </div>
+   </aside>
+
+   <!-- MAIN  -->
+    
+</div>
+<main id="main-content">
+   <div class="margin-b-64"></div>
+   <div class="main-wrap">
+       <!-- 성수동 사진 -->
+      <section class="cont-1">
+         <figure class="cont-1-img"></figure>
+       </section>
+
+       <!-- 카피 -->
+       <section class="cont-2-copy">
+           <h2><strong>함께 만드는 지속 가능한 미래, IKEA Lab </strong></h2>
+           <p>지속 가능한 내일 위한 생활 어렵게 느껴지셨나요? <br>누구나 쉽게 지속 가능한 생활에 대한 정보와 영감을 얻을 수 있는 공간이자, <br>IKEA가 추구하는 지속 가능성의 가치를 오감으로 느낄 수 있는 체험형 공간인 IKEA Lab이 곧 다가옵니다!</p>
+       </section>
+
+       <!-- 전역버튼 검정 -->
+       <section class="button-black margin-b-64">
+           <div id="button-black">
+               <a href="#" role="button" class="pub_btn">
+                   <span class="btn__label">자세히 보기</span>
+               </a>
+           </div>
+       </section>
+
+       <!-- 이미지 두개 -->
+       <section class="two-box  margin-b-64">
+          <div class="two-box-container"> 
+            <!-- BOX 첫번쨰 -->
+            <div class="two-box_1"> 
+               <div class="box1-img-wrap margin-b-40">
+                  <figure class="two-box_1--1 "></figure>
+               </div>
+             
+
+               <div id="two-box_1--1-copy-wrap">
+                  <div class="two-box_1--1-copy margin-b-40">
+                     <h2 class="margin-b-8"><strong>겨울이 기다려지는 포근한 우리집</strong></h2>
+                     <p>소파/소파베드, 조명, 쿠션커버, 담요, 머그컵. <strong>최대 30%까지 할인되는 총 802개의 제품으로 </strong>겨울이 기다려지는 포근한 우리집을 만들어보세요.</p>
+                  </div>
+               </div>
+               <section class="button-black margin-b-64">
+                  <div id="button-black">
+                      <a href="#" role="button" class="pub_btn">
+                          <span class="btn__label">자세히 보기</span>
+                      </a>
+                  </div>
+              </section>
+            </div>
+
+             <!-- BOX 2번쨰 -->
+             <div class="two-box_2"> 
+               <div class="box2-img-wrap margin-b-40">
+                  <figure class="two-box_1--2 ">
+                     <!-- <ul class="margin-b-0">
+                        <li class="wb wb-li">
+                           <span class="product-inspirational-2">
+                              <a href="#">확장형테이블</span>
+                                 <span class="">
+                                    <span class="price">
+                                       ￦ 499,000
+                                    </span>
+                                 </span>
+                              </a>
+                           </span>
+                        </li>
+                     </ul> -->
+                  </figure>
+                  
+               </div>
+           
+              
+               <div id="two-box_2--2-copy-wrap">
+                  <div class="two-box_2--2-copy margin-b-40">
+                     <h2 class="margin-b-8"><strong>마법 같은 순간을 위한 아이디어</strong></h2>
+                     <p>멋진 선물 아이디어부터 작은 테이블에 모두가 둘러앉을 수 있는 공간 절약 팁을 확인해보세요.</p>
+                  </div>
+               </div>
+               <section class="button-black margin-b-64">
+                  <div id="button-black">
+                      <a href="#" role="button" class="pub_btn">
+                          <span class="btn__label">자세히 보기</span>
+                      </a>
+                  </div>
+              </section>
+            </div>
+ 
+       </section>
+       
+   </div>
+</main>
+
+
+   <!-- Script -->
+
+   <script> 
+    var notice_openstate = 0;
+  
+
+      function notice_toggle() {
+         
+          if(notice_openstate == 0) {
+            document.getElementById('notice_center_content').style="height:70px;";
+            document.getElementById("notice_center_hidden__dismiss").style="display:block;";
+            notice_openstate = 1;
+          }
+          else {
+            document.getElementById('notice_center_content').style="height:40px;";
+            document.getElementById("notice_center_hidden__dismiss").style="display:none;";
+            notice_openstate = 0;
+          } 
+      }
+
+      function side_menu_open() { 
+         document.getElementById('side_slide_menu').style="left:0;";
+         document.getElementById('dimmed').style="display:block"
+        // document.getElementsByClassName('side_slide_menu').style="left:480px;";
+         // document.getElementById('slide-overlay--visible').style="opacity:0.25; pointer-events:all" 
+      }
+    
+
+      function side_menu_close() {
+         document.getElementById('side_slide_menu').style="left:-30rem;"
+         document.getElementById('dimmed').style="display:none"
+      }
+
+
+      //회전
+      var count=0;
+      function rot(e){
+      count++;
+      var deg=count*180;
+      e.style.transform = "rotate("+deg+"deg)";
+      }
+ 
+
+   </script>
+</body>
+
+
+</html>

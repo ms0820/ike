@@ -1,0 +1,122 @@
+/* CSS Reset */
+* ,
+*::before,
+*::after
+{
+   /* border: 1px solid red; */
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+
+body {
+   font-family: 'Noto Sans',
+   'Noto Sans KR', 
+   'Roboto', 
+   'Open Sans', 
+   -apple-system, sans-serif !important;
+  color:  #484848;
+}
+
+ 
+a {
+   text-decoration: none;
+   background-color: transparent;
+}
+
+ul,li {
+   list-style: none;
+}
+
+button{
+   background: inherit ; 
+   border:none; 
+   outline: none;
+   box-shadow:none; 
+   border-radius:0; 
+   padding:0; 
+   overflow:visible; 
+   cursor:pointer
+}
+
+/* 상위 전역 버튼 스타일 */
+.btn-style {
+   width: 32px;
+   height: 32px;
+   border-radius: 16px;
+}
+
+.btn-style:hover {
+   background-color:#f2f2f2; 
+   background: rgba(242,242,242, .2);
+}
+
+.btn-style:active {
+  background-color:#dfdfdf;
+  background: rgba(223,223,223, .2);
+}
+
+
+strong {
+   font-weight: 700;
+}
+
+h2 {
+   color: #111;
+}
+ 
+
+.pub_btn {
+   position: relative;
+   display: inline-flex;
+   text-decoration: none;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   border: 0;
+   font-weight: 700;
+   font-size: .875rem;
+   line-height: 1.5;
+   padding: 0;
+   transition-property: all;
+   transition-duration: 100ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
+   cursor: pointer;
+   box-sizing: border-box;
+   background: transparent;
+   border-radius: 64px;
+   vertical-align: top;
+}
+
+.btn__label {
+   display: inline-flex;
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+   transition-property: all;
+   transition-duration: 100ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
+   height: 40px;
+   background: #111;
+   color: #fff;
+   border-radius: 64px;
+   padding: 0 24px;
+   font-size: 12px;
+   line-height: 16px;
+}
+
+.margin-b-40 {
+   margin-bottom: 40px;
+}
+
+.margin-b-8 {
+   margin-bottom: 8px;
+}
+
+.margin-b-0 {
+   margin-bottom: 0!important;
+}
+
+.wb {
+   word-break: break-word;
+}
